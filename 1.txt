@@ -1,0 +1,59 @@
+860344048529318
+860344049768006
+860344049768436
+860344048450887
+860344049735468
+860344049734032
+860344048449939
+860344049824635
+860344049745178
+860344049734271
+860344049793277
+860344049744288
+860344049785950
+860344049745434
+860344049793186
+
+1：while（1）后还有程序
+2：重启
+
+
+
+
+
+void checkPressAD(){
+		if((lastAD > zeroAD) && (lastAD < middleAD)){
+			 
+			val5 = ((middleAD - zeroAD) / 800.0);
+			val6 = (lastAD - zeroAD) / val5;
+			if(val6 >= lastPa){
+				if(val6 - lastPa >= 40){
+					report_flag = 1;
+				}
+			}else{
+				if(lastPa - val6 >= 40){
+					report_flag = 1;
+				}
+			}
+
+
+
+void checkPressAD1(){
+		
+#else
+		
+		if(lastPaTemp != 0){																			//压差上传	METER
+			if(lastPaTemp > finalMax){
+				if((lastPaTemp - finalMax) > 80){
+					report_flag = 1;
+				}
+			}else{
+				if((finalMax - lastPaTemp) > 80){
+					report_flag = 1;
+				}
+			}
+		}
+#endif		
+
+
+
